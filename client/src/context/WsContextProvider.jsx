@@ -4,7 +4,7 @@ const WsContextProvider = ({children}) => {
     const [ws,setWs] = useState(null)
     useEffect(()=>{
     
-    const server = new WebSocket('http://localhost:3000')
+    const server = new WebSocket('http://localhost:3000/')
     setWs(server)
     server.onopen=()=>{
         console.log('WS connected')

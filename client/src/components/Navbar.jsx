@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react'
 import UserContext from '../context/UserContext'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import AddFriend from './AddFriend'
 import Notification from './Notification'
 const Navbar = () => {
@@ -33,7 +33,7 @@ const Navbar = () => {
       {addFriend&&<AddFriend closeFunction={setAddFriend}/>}
       {seeNotification&&<Notification closeFunction={setSeeNotification} notifications={notifications}/>}
   <div className="flex-1">
-    <a className="btn btn-ghost text-xl">MindScape</a>
+    <Link className="btn btn-ghost text-xl" to={'/home'}>Chat</Link>
   </div>
   <div className="flex-none gap-2">
     <div className="form-control">
